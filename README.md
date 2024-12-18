@@ -19,6 +19,7 @@
 • версия Java – 17; <br>
 • система сборки – Maven; <br>
 • сторонние библиотеки – maven-jar-plugin, версия 3.1.1;<br>
+Работоспособность была проверена на системе Windows.
 
 Пример запуска:<br>
 java -jar data-sorter.jar -s -a -p sample- in1.txt in2.txt
