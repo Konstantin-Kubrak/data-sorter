@@ -3,6 +3,7 @@ package kubrak.konstantin;
 import java.util.LinkedList;
 import java.util.List;
 
+//класс предназначен для аккумулирования данных из файлов на время работы утилиты
 public class DataStorage {
 
     private static final List<Long> someLongs = new LinkedList<>();

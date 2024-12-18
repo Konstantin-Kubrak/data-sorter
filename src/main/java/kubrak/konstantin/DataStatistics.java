@@ -2,6 +2,7 @@ package kubrak.konstantin;
 
 import java.util.List;
 
+//класс предназначен для вывода статистики
 public class DataStatistics {
 
 

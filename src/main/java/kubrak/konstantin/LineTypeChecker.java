@@ -1,5 +1,6 @@
 package kubrak.konstantin;
 
+//методы класса проверяют тип строк для их фильтрации
 public class LineTypeChecker {
 
     public static boolean checkIfDoubleType(String line) {

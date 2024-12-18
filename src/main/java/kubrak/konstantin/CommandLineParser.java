@@ -7,6 +7,11 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.function.Predicate;
 
+/*
+Класс предназначен для парсинга аргументов, переданных в приложение при его запуске,
+и хранения
+
+*/
 public class CommandLineParser {
 
     private static List<String> filesToParse = new LinkedList<>();
@@ -32,7 +37,7 @@ public class CommandLineParser {
 
     }
 
-
+    //метод ищет в аргументах файлы, которые будут парситься
     private static void getFilesToParse(String[] args) {
 
         for (String fileName : args) {
@@ -55,6 +60,7 @@ public class CommandLineParser {
         }
     }
 
+    //метод проверяет, были ли переданы аргументы при запуске утилиты
     private static void checkIfArgsIsEmpty(String[] args) {
 
         if (args.length == 0) {
@@ -64,12 +70,15 @@ public class CommandLineParser {
         }
     }
 
+    //метод проверяет есть ли "флаг", что требуется дополнять уже существующий файл
     private static void overrideFile(String[] args) {
 
         appendDataToFile = Arrays.stream(args).anyMatch(Predicate.isEqual("-a"));
-
     }
 
+
+    //метод проверяет есть ли "флаг", что будет применён префикс,
+    // а так же сохраняет префикс для работы с ним утилиты
     private static void getPrefixForFiles(String[] args) {
 
         for (int i = 0; i < args.length; i++) {
@@ -98,6 +107,8 @@ public class CommandLineParser {
         }
     }
 
+    //метод проверяет есть ли "флаг", что будет использована не дефолтная директория сохранения файлов,
+    //а так же сохраняет директорию для использования в работе утилиты
     private static void getPathForFilesSave(String[] args) {
 
         for (int i = 0; i < args.length; i++) {
@@ -123,6 +134,8 @@ public class CommandLineParser {
         }
     }
 
+    //метод проверяет есть ли "флаг", что необходимым вывод статистики в консоль,
+    //а так же тип статистики, и сохраняет эти данные для работы утилиты
     private static void defineStatisticsRequiredAndType(String[] args){
 
         for(String data : args){

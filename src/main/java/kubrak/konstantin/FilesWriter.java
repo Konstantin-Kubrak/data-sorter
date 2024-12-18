@@ -4,6 +4,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
+//класс для записи файлов
 public class FilesWriter {
 
     public static void writeFile(String filePath, String filePrefix, String fileName, boolean append, String content) {
